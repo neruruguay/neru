@@ -13,15 +13,15 @@ if (!defined("DB_SERVER")) {
 
     if (on_iis()) {
         \define("DB_SERVER", "localhost");
-        \define("DB_NAME", "daguerre_cms");
-        \define("DB_USER", "daguerre_cms");
-        \define("DB_PASSWORD", "daguerre_cms");
+        \define("DB_NAME", "NAME");
+        \define("DB_USER", "USER");
+        \define("DB_PASSWORD", "PASSWORD");
         //echo 'IIS'; exit();
     } else {
         \define("DB_SERVER", "localhost");
-        \define("DB_NAME", "mdaguerr_negociosenred");
-        \define("DB_USER", "mdaguerr_negocio");
-        \define("DB_PASSWORD", "d3d05B3");
+        \define("DB_NAME", "NAME");
+        \define("DB_USER", "USER");
+        \define("DB_PASSWORD", "PASSWORD");
         //echo 'Apache'; exit();
     }
 }
