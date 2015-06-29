@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+  <head><!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8"><style>/*
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  vertical-align: middle;
+}
+button,
+input {
+  *overflow: visible;
+  line-height: normal;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333;
+  background-color: #fff;
+}
+a {
+  color: #08c;
+  text-decoration: none;
+}
+a:hover {
+  color: #005580;
+  text-decoration: underline;
+}
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+.row:before,
+.row:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.row:after {
+  clear: both;
+}
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 940px;
+}
+.span12 {
+  width: 940px;
+}
+.span11 {
+  width: 860px;
+}
+.span10 {
+  width: 780px;
+}
+.span9 {
+  width: 700px;
+}
+.span8 {
+  width: 620px;
+}
+.span7 {
+  width: 540px;
+}
+.span6 {
+  width: 460px;
+}
+.span5 {
+  width: 380px;
+}
+.span4 {
+  width: 300px;
+}
+.span3 {
+  width: 220px;
+}
+.span2 {
+  width: 140px;
+}
+.span1 {
+  width: 60px;
+}
+[class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  *zoom: 1;
+}
+.container:before,
+.container:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.container:after {
+  clear: both;
+}
+p {
+  margin: 0 0 10px;
+}
+.lead {
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 200;
+  line-height: 30px;
+}
+small {
+  font-size: 85%;
+}
+h1 {
+  margin: 10px 0;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 20px;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+h1 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999;
+}
+h1 {
+  line-height: 40px;
+}
+h1 {
+  font-size: 38.5px;
+}
+h1 small {
+  font-size: 24.5px;
+}
+body {
+  margin-top: 90px;
+}
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -480px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  z-index: 10;
+}
+.footer {
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: underline;
+}
+.the-icons {
+  font-size: 14px;
+  line-height: 24px;
+}
+.switch {
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  color: #666;
+}
+.switch input {
+  margin-right: 0.3em;
+}
+.codesOn .i-name {
+  display: none;
+}
+.codesOn .i-code {
+  display: inline;
+}
+.i-code {
+  display: none;
+}
+.the-icons i {
+    display: inline-block;
+    font-size: 50px;
+    line-height: 50px;
+    margin: 16px 16px 16px -30px;
+    vertical-align: middle;
+}
+</style>
+    <link rel="stylesheet" href="css/skticons.css">
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/skticons-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+        
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>
+        skticons
+         <small>font demo</small>
+      </h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div id="icons" class="container">
+      <div class="row">
+        <div title="Code: 0xe800" class="the-icons span3"><i class="skt-icon-3ds"></i> <span class="i-name">skt-icon-3ds</span><span class="i-code">0xe800</span></div>
+        <div title="Code: 0xe801" class="the-icons span3"><i class="skt-icon-7z"></i> <span class="i-name">skt-icon-7z</span><span class="i-code">0xe801</span></div>
+        <div title="Code: 0xe802" class="the-icons span3"><i class="skt-icon-ai"></i> <span class="i-name">skt-icon-ai</span><span class="i-code">0xe802</span></div>
+        <div title="Code: 0xe803" class="the-icons span3"><i class="skt-icon-avi"></i> <span class="i-name">skt-icon-avi</span><span class="i-code">0xe803</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe804" class="the-icons span3"><i class="skt-icon-bmp"></i> <span class="i-name">skt-icon-bmp</span><span class="i-code">0xe804</span></div>
+        <div title="Code: 0xe805" class="the-icons span3"><i class="skt-icon-css"></i> <span class="i-name">skt-icon-css</span><span class="i-code">0xe805</span></div>
+        <div title="Code: 0xe806" class="the-icons span3"><i class="skt-icon-csv"></i> <span class="i-name">skt-icon-csv</span><span class="i-code">0xe806</span></div>
+        <div title="Code: 0xe807" class="the-icons span3"><i class="skt-icon-db2"></i> <span class="i-name">skt-icon-db2</span><span class="i-code">0xe807</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe808" class="the-icons span3"><i class="skt-icon-dbf"></i> <span class="i-name">skt-icon-dbf</span><span class="i-code">0xe808</span></div>
+        <div title="Code: 0xe809" class="the-icons span3"><i class="skt-icon-dll"></i> <span class="i-name">skt-icon-dll</span><span class="i-code">0xe809</span></div>
+        <div title="Code: 0xe80a" class="the-icons span3"><i class="skt-icon-doc"></i> <span class="i-name">skt-icon-doc</span><span class="i-code">0xe80a</span></div>
+        <div title="Code: 0xe80b" class="the-icons span3"><i class="skt-icon-docx"></i> <span class="i-name">skt-icon-docx</span><span class="i-code">0xe80b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe80c" class="the-icons span3"><i class="skt-icon-eps"></i> <span class="i-name">skt-icon-eps</span><span class="i-code">0xe80c</span></div>
+        <div title="Code: 0xe80d" class="the-icons span3"><i class="skt-icon-html"></i> <span class="i-name">skt-icon-html</span><span class="i-code">0xe80d</span></div>
+        <div title="Code: 0xe80e" class="the-icons span3"><i class="skt-icon-exe"></i> <span class="i-name">skt-icon-exe</span><span class="i-code">0xe80e</span></div>
+        <div title="Code: 0xe80f" class="the-icons span3"><i class="skt-icon-fla"></i> <span class="i-name">skt-icon-fla</span><span class="i-code">0xe80f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe810" class="the-icons span3"><i class="skt-icon-flash"></i> <span class="i-name">skt-icon-flash</span><span class="i-code">0xe810</span></div>
+        <div title="Code: 0xe811" class="the-icons span3"><i class="skt-icon-flv"></i> <span class="i-name">skt-icon-flv</span><span class="i-code">0xe811</span></div>
+        <div title="Code: 0xe812" class="the-icons span3"><i class="skt-icon-gzip"></i> <span class="i-name">skt-icon-gzip</span><span class="i-code">0xe812</span></div>
+        <div title="Code: 0xe813" class="the-icons span3"><i class="skt-icon-delete"></i> <span class="i-name">skt-icon-delete</span><span class="i-code">0xe813</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe814" class="the-icons span3"><i class="skt-icon-ico"></i> <span class="i-name">skt-icon-ico</span><span class="i-code">0xe814</span></div>
+        <div title="Code: 0xe815" class="the-icons span3"><i class="skt-icon-indd"></i> <span class="i-name">skt-icon-indd</span><span class="i-code">0xe815</span></div>
+        <div title="Code: 0xe816" class="the-icons span3"><i class="skt-icon-iso"></i> <span class="i-name">skt-icon-iso</span><span class="i-code">0xe816</span></div>
+        <div title="Code: 0xe817" class="the-icons span3"><i class="skt-icon-lightbulb"></i> <span class="i-name">skt-icon-lightbulb</span><span class="i-code">0xe817</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe818" class="the-icons span3"><i class="skt-icon-jar"></i> <span class="i-name">skt-icon-jar</span><span class="i-code">0xe818</span></div>
+        <div title="Code: 0xe819" class="the-icons span3"><i class="skt-icon-js"></i> <span class="i-name">skt-icon-js</span><span class="i-code">0xe819</span></div>
+        <div title="Code: 0xe81a" class="the-icons span3"><i class="skt-icon-jsp"></i> <span class="i-name">skt-icon-jsp</span><span class="i-code">0xe81a</span></div>
+        <div title="Code: 0xe81b" class="the-icons span3"><i class="skt-icon-max"></i> <span class="i-name">skt-icon-max</span><span class="i-code">0xe81b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe81c" class="the-icons span3"><i class="skt-icon-mid"></i> <span class="i-name">skt-icon-mid</span><span class="i-code">0xe81c</span></div>
+        <div title="Code: 0xe81d" class="the-icons span3"><i class="skt-icon-mov"></i> <span class="i-name">skt-icon-mov</span><span class="i-code">0xe81d</span></div>
+        <div title="Code: 0xe81e" class="the-icons span3"><i class="skt-icon-mp3"></i> <span class="i-name">skt-icon-mp3</span><span class="i-code">0xe81e</span></div>
+        <div title="Code: 0xe81f" class="the-icons span3"><i class="skt-icon-mp4"></i> <span class="i-name">skt-icon-mp4</span><span class="i-code">0xe81f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe820" class="the-icons span3"><i class="skt-icon-mpg"></i> <span class="i-name">skt-icon-mpg</span><span class="i-code">0xe820</span></div>
+        <div title="Code: 0xe821" class="the-icons span3"><i class="skt-icon-ogg"></i> <span class="i-name">skt-icon-ogg</span><span class="i-code">0xe821</span></div>
+        <div title="Code: 0xe822" class="the-icons span3"><i class="skt-icon-pdb"></i> <span class="i-name">skt-icon-pdb</span><span class="i-code">0xe822</span></div>
+        <div title="Code: 0xe823" class="the-icons span3"><i class="skt-icon-pdf"></i> <span class="i-name">skt-icon-pdf</span><span class="i-code">0xe823</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe824" class="the-icons span3"><i class="skt-icon-pps"></i> <span class="i-name">skt-icon-pps</span><span class="i-code">0xe824</span></div>
+        <div title="Code: 0xe825" class="the-icons span3"><i class="skt-icon-ppt"></i> <span class="i-name">skt-icon-ppt</span><span class="i-code">0xe825</span></div>
+        <div title="Code: 0xe826" class="the-icons span3"><i class="skt-icon-pptx"></i> <span class="i-name">skt-icon-pptx</span><span class="i-code">0xe826</span></div>
+        <div title="Code: 0xe827" class="the-icons span3"><i class="skt-icon-psd"></i> <span class="i-name">skt-icon-psd</span><span class="i-code">0xe827</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe828" class="the-icons span3"><i class="skt-icon-rar"></i> <span class="i-name">skt-icon-rar</span><span class="i-code">0xe828</span></div>
+        <div title="Code: 0xe829" class="the-icons span3"><i class="skt-icon-rtf"></i> <span class="i-name">skt-icon-rtf</span><span class="i-code">0xe829</span></div>
+        <div title="Code: 0xe82a" class="the-icons span3"><i class="skt-icon-sql"></i> <span class="i-name">skt-icon-sql</span><span class="i-code">0xe82a</span></div>
+        <div title="Code: 0xe82b" class="the-icons span3"><i class="skt-icon-edit-1"></i> <span class="i-name">skt-icon-edit-1</span><span class="i-code">0xe82b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe82c" class="the-icons span3"><i class="skt-icon-svg"></i> <span class="i-name">skt-icon-svg</span><span class="i-code">0xe82c</span></div>
+        <div title="Code: 0xe82d" class="the-icons span3"><i class="skt-icon-swf"></i> <span class="i-name">skt-icon-swf</span><span class="i-code">0xe82d</span></div>
+        <div title="Code: 0xe82e" class="the-icons span3"><i class="skt-icon-tar1"></i> <span class="i-name">skt-icon-tar1</span><span class="i-code">0xe82e</span></div>
+        <div title="Code: 0xe82f" class="the-icons span3"><i class="skt-icon-tga"></i> <span class="i-name">skt-icon-tga</span><span class="i-code">0xe82f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe830" class="the-icons span3"><i class="skt-icon-tiff"></i> <span class="i-name">skt-icon-tiff</span><span class="i-code">0xe830</span></div>
+        <div title="Code: 0xe831" class="the-icons span3"><i class="skt-icon-ttf"></i> <span class="i-name">skt-icon-ttf</span><span class="i-code">0xe831</span></div>
+        <div title="Code: 0xe832" class="the-icons span3"><i class="skt-icon-txt"></i> <span class="i-name">skt-icon-txt</span><span class="i-code">0xe832</span></div>
+        <div title="Code: 0xe833" class="the-icons span3"><i class="skt-icon-vob"></i> <span class="i-name">skt-icon-vob</span><span class="i-code">0xe833</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe834" class="the-icons span3"><i class="skt-icon-wav"></i> <span class="i-name">skt-icon-wav</span><span class="i-code">0xe834</span></div>
+        <div title="Code: 0xe835" class="the-icons span3"><i class="skt-icon-wma"></i> <span class="i-name">skt-icon-wma</span><span class="i-code">0xe835</span></div>
+        <div title="Code: 0xe836" class="the-icons span3"><i class="skt-icon-wmv"></i> <span class="i-name">skt-icon-wmv</span><span class="i-code">0xe836</span></div>
+        <div title="Code: 0xe837" class="the-icons span3"><i class="skt-icon-xhtml"></i> <span class="i-name">skt-icon-xhtml</span><span class="i-code">0xe837</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe838" class="the-icons span3"><i class="skt-icon-xls"></i> <span class="i-name">skt-icon-xls</span><span class="i-code">0xe838</span></div>
+        <div title="Code: 0xe839" class="the-icons span3"><i class="skt-icon-xlsx"></i> <span class="i-name">skt-icon-xlsx</span><span class="i-code">0xe839</span></div>
+        <div title="Code: 0xe83a" class="the-icons span3"><i class="skt-icon-xml5"></i> <span class="i-name">skt-icon-xml5</span><span class="i-code">0xe83a</span></div>
+        <div title="Code: 0xe83b" class="the-icons span3"><i class="skt-icon-down-open"></i> <span class="i-name">skt-icon-down-open</span><span class="i-code">0xe83b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe83c" class="the-icons span3"><i class="skt-icon-left-open"></i> <span class="i-name">skt-icon-left-open</span><span class="i-code">0xe83c</span></div>
+        <div title="Code: 0xe83d" class="the-icons span3"><i class="skt-icon-right-open"></i> <span class="i-name">skt-icon-right-open</span><span class="i-code">0xe83d</span></div>
+        <div title="Code: 0xe83e" class="the-icons span3"><i class="skt-icon-up-open"></i> <span class="i-name">skt-icon-up-open</span><span class="i-code">0xe83e</span></div>
+        <div title="Code: 0xe83f" class="the-icons span3"><i class="skt-icon-plus-squared"></i> <span class="i-name">skt-icon-plus-squared</span><span class="i-code">0xe83f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe840" class="the-icons span3"><i class="skt-icon-minus-squared"></i> <span class="i-name">skt-icon-minus-squared</span><span class="i-code">0xe840</span></div>
+        <div title="Code: 0xe841" class="the-icons span3"><i class="skt-icon-desktop"></i> <span class="i-name">skt-icon-desktop</span><span class="i-code">0xe841</span></div>
+        <div title="Code: 0xe842" class="the-icons span3"><i class="skt-icon-laptop"></i> <span class="i-name">skt-icon-laptop</span><span class="i-code">0xe842</span></div>
+        <div title="Code: 0xe843" class="the-icons span3"><i class="skt-icon-tablet"></i> <span class="i-name">skt-icon-tablet</span><span class="i-code">0xe843</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe844" class="the-icons span3"><i class="skt-icon-mobile"></i> <span class="i-name">skt-icon-mobile</span><span class="i-code">0xe844</span></div>
+        <div title="Code: 0xe845" class="the-icons span3"><i class="skt-icon-code-2"></i> <span class="i-name">skt-icon-code-2</span><span class="i-code">0xe845</span></div>
+        <div title="Code: 0xe846" class="the-icons span3"><i class="skt-icon-folder-add"></i> <span class="i-name">skt-icon-folder-add</span><span class="i-code">0xe846</span></div>
+        <div title="Code: 0xe847" class="the-icons span3"><i class="skt-icon-folder-delete"></i> <span class="i-name">skt-icon-folder-delete</span><span class="i-code">0xe847</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe848" class="the-icons span3"><i class="skt-icon-folder-1"></i> <span class="i-name">skt-icon-folder-1</span><span class="i-code">0xe848</span></div>
+        <div title="Code: 0xe849" class="the-icons span3"><i class="skt-icon-folder-empty"></i> <span class="i-name">skt-icon-folder-empty</span><span class="i-code">0xe849</span></div>
+        <div title="Code: 0xe84a" class="the-icons span3"><i class="skt-icon-folder-open-empty"></i> <span class="i-name">skt-icon-folder-open-empty</span><span class="i-code">0xe84a</span></div>
+        <div title="Code: 0xe84b" class="the-icons span3"><i class="skt-icon-docs"></i> <span class="i-name">skt-icon-docs</span><span class="i-code">0xe84b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe84c" class="the-icons span3"><i class="skt-icon-file-pdf"></i> <span class="i-name">skt-icon-file-pdf</span><span class="i-code">0xe84c</span></div>
+        <div title="Code: 0xe84d" class="the-icons span3"><i class="skt-icon-file-word"></i> <span class="i-name">skt-icon-file-word</span><span class="i-code">0xe84d</span></div>
+        <div title="Code: 0xe84e" class="the-icons span3"><i class="skt-icon-file-excel"></i> <span class="i-name">skt-icon-file-excel</span><span class="i-code">0xe84e</span></div>
+        <div title="Code: 0xe84f" class="the-icons span3"><i class="skt-icon-file-powerpoint"></i> <span class="i-name">skt-icon-file-powerpoint</span><span class="i-code">0xe84f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe850" class="the-icons span3"><i class="skt-icon-file-image"></i> <span class="i-name">skt-icon-file-image</span><span class="i-code">0xe850</span></div>
+        <div title="Code: 0xe851" class="the-icons span3"><i class="skt-icon-file-archive"></i> <span class="i-name">skt-icon-file-archive</span><span class="i-code">0xe851</span></div>
+        <div title="Code: 0xe852" class="the-icons span3"><i class="skt-icon-file-audio"></i> <span class="i-name">skt-icon-file-audio</span><span class="i-code">0xe852</span></div>
+        <div title="Code: 0xe853" class="the-icons span3"><i class="skt-icon-file-video"></i> <span class="i-name">skt-icon-file-video</span><span class="i-code">0xe853</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe854" class="the-icons span3"><i class="skt-icon-file-code"></i> <span class="i-name">skt-icon-file-code</span><span class="i-code">0xe854</span></div>
+        <div title="Code: 0xe855" class="the-icons span3"><i class="skt-icon-doc-text-inv"></i> <span class="i-name">skt-icon-doc-text-inv</span><span class="i-code">0xe855</span></div>
+        <div title="Code: 0xe856" class="the-icons span3"><i class="skt-icon-doc-text"></i> <span class="i-name">skt-icon-doc-text</span><span class="i-code">0xe856</span></div>
+        <div title="Code: 0xe857" class="the-icons span3"><i class="skt-icon-doc-inv"></i> <span class="i-name">skt-icon-doc-inv</span><span class="i-code">0xe857</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe858" class="the-icons span3"><i class="skt-icon-doc-2"></i> <span class="i-name">skt-icon-doc-2</span><span class="i-code">0xe858</span></div>
+        <div title="Code: 0xe859" class="the-icons span3"><i class="skt-icon-zip"></i> <span class="i-name">skt-icon-zip</span><span class="i-code">0xe859</span></div>
+        <div title="Code: 0xe85a" class="the-icons span3"><i class="skt-icon-glyph-41"></i> <span class="i-name">skt-icon-glyph-41</span><span class="i-code">0xe85a</span></div>
+        <div title="Code: 0xe85b" class="the-icons span3"><i class="skt-icon-help2"></i> <span class="i-name">skt-icon-help2</span><span class="i-code">0xe85b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe85c" class="the-icons span3"><i class="skt-icon-earth"></i> <span class="i-name">skt-icon-earth</span><span class="i-code">0xe85c</span></div>
+        <div title="Code: 0xe85d" class="the-icons span3"><i class="skt-icon-glyph-3"></i> <span class="i-name">skt-icon-glyph-3</span><span class="i-code">0xe85d</span></div>
+        <div title="Code: 0xe85e" class="the-icons span3"><i class="skt-icon-search"></i> <span class="i-name">skt-icon-search</span><span class="i-code">0xe85e</span></div>
+        <div title="Code: 0xe85f" class="the-icons span3"><i class="skt-icon-glyph-5"></i> <span class="i-name">skt-icon-glyph-5</span><span class="i-code">0xe85f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe860" class="the-icons span3"><i class="skt-icon-ps"></i> <span class="i-name">skt-icon-ps</span><span class="i-code">0xe860</span></div>
+        <div title="Code: 0xe861" class="the-icons span3"><i class="skt-icon-glyph-7"></i> <span class="i-name">skt-icon-glyph-7</span><span class="i-code">0xe861</span></div>
+        <div title="Code: 0xe862" class="the-icons span3"><i class="skt-icon-glyph-8"></i> <span class="i-name">skt-icon-glyph-8</span><span class="i-code">0xe862</span></div>
+        <div title="Code: 0xe863" class="the-icons span3"><i class="skt-icon-glyph-9"></i> <span class="i-name">skt-icon-glyph-9</span><span class="i-code">0xe863</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe864" class="the-icons span3"><i class="skt-icon-image2"></i> <span class="i-name">skt-icon-image2</span><span class="i-code">0xe864</span></div>
+        <div title="Code: 0xe865" class="the-icons span3"><i class="skt-icon-glyph-11"></i> <span class="i-name">skt-icon-glyph-11</span><span class="i-code">0xe865</span></div>
+        <div title="Code: 0xe866" class="the-icons span3"><i class="skt-icon-glyph-12"></i> <span class="i-name">skt-icon-glyph-12</span><span class="i-code">0xe866</span></div>
+        <div title="Code: 0xe867" class="the-icons span3"><i class="skt-icon-glyph-13"></i> <span class="i-name">skt-icon-glyph-13</span><span class="i-code">0xe867</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe868" class="the-icons span3"><i class="skt-icon-assets"></i> <span class="i-name">skt-icon-assets</span><span class="i-code">0xe868</span></div>
+        <div title="Code: 0xe869" class="the-icons span3"><i class="skt-icon-ok-circled2"></i> <span class="i-name">skt-icon-ok-circled2</span><span class="i-code">0xe869</span></div>
+        <div title="Code: 0xe86a" class="the-icons span3"><i class="skt-icon-move"></i> <span class="i-name">skt-icon-move</span><span class="i-code">0xe86a</span></div>
+        <div title="Code: 0xe86b" class="the-icons span3"><i class="skt-icon-location"></i> <span class="i-name">skt-icon-location</span><span class="i-code">0xe86b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe86c" class="the-icons span3"><i class="skt-icon-plus"></i> <span class="i-name">skt-icon-plus</span><span class="i-code">0xe86c</span></div>
+        <div title="Code: 0xe86d" class="the-icons span3"><i class="skt-icon-ok"></i> <span class="i-name">skt-icon-ok</span><span class="i-code">0xe86d</span></div>
+        <div title="Code: 0xe86e" class="the-icons span3"><i class="skt-icon-cancel"></i> <span class="i-name">skt-icon-cancel</span><span class="i-code">0xe86e</span></div>
+        <div title="Code: 0xe86f" class="the-icons span3"><i class="skt-icon-glyph-21"></i> <span class="i-name">skt-icon-glyph-21</span><span class="i-code">0xe86f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe870" class="the-icons span3"><i class="skt-icon-edit2"></i> <span class="i-name">skt-icon-edit2</span><span class="i-code">0xe870</span></div>
+        <div title="Code: 0xe871" class="the-icons span3"><i class="skt-icon-glyph-23"></i> <span class="i-name">skt-icon-glyph-23</span><span class="i-code">0xe871</span></div>
+        <div title="Code: 0xe872" class="the-icons span3"><i class="skt-icon-glyph-24"></i> <span class="i-name">skt-icon-glyph-24</span><span class="i-code">0xe872</span></div>
+        <div title="Code: 0xe873" class="the-icons span3"><i class="skt-icon-glyph-25"></i> <span class="i-name">skt-icon-glyph-25</span><span class="i-code">0xe873</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe874" class="the-icons span3"><i class="skt-icon-hour"></i> <span class="i-name">skt-icon-hour</span><span class="i-code">0xe874</span></div>
+        <div title="Code: 0xe875" class="the-icons span3"><i class="skt-icon-glyph-27"></i> <span class="i-name">skt-icon-glyph-27</span><span class="i-code">0xe875</span></div>
+        <div title="Code: 0xe876" class="the-icons span3"><i class="skt-icon-comment2"></i> <span class="i-name">skt-icon-comment2</span><span class="i-code">0xe876</span></div>
+        <div title="Code: 0xe877" class="the-icons span3"><i class="skt-icon-search2"></i> <span class="i-name">skt-icon-search2</span><span class="i-code">0xe877</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe878" class="the-icons span3"><i class="skt-icon-glyph-30"></i> <span class="i-name">skt-icon-glyph-30</span><span class="i-code">0xe878</span></div>
+        <div title="Code: 0xe879" class="the-icons span3"><i class="skt-icon-glyph-31"></i> <span class="i-name">skt-icon-glyph-31</span><span class="i-code">0xe879</span></div>
+        <div title="Code: 0xe87a" class="the-icons span3"><i class="skt-icon-lock"></i> <span class="i-name">skt-icon-lock</span><span class="i-code">0xe87a</span></div>
+        <div title="Code: 0xe87b" class="the-icons span3"><i class="skt-icon-config3"></i> <span class="i-name">skt-icon-config3</span><span class="i-code">0xe87b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe87c" class="the-icons span3"><i class="skt-icon-glyph-34"></i> <span class="i-name">skt-icon-glyph-34</span><span class="i-code">0xe87c</span></div>
+        <div title="Code: 0xe87d" class="the-icons span3"><i class="skt-icon-glyph-35"></i> <span class="i-name">skt-icon-glyph-35</span><span class="i-code">0xe87d</span></div>
+        <div title="Code: 0xe87e" class="the-icons span3"><i class="skt-icon-glyph-36"></i> <span class="i-name">skt-icon-glyph-36</span><span class="i-code">0xe87e</span></div>
+        <div title="Code: 0xe87f" class="the-icons span3"><i class="skt-icon-ok2"></i> <span class="i-name">skt-icon-ok2</span><span class="i-code">0xe87f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe880" class="the-icons span3"><i class="skt-icon-calendar2"></i> <span class="i-name">skt-icon-calendar2</span><span class="i-code">0xe880</span></div>
+        <div title="Code: 0xe881" class="the-icons span3"><i class="skt-icon-glyph-39"></i> <span class="i-name">skt-icon-glyph-39</span><span class="i-code">0xe881</span></div>
+        <div title="Code: 0xe882" class="the-icons span3"><i class="skt-icon-play"></i> <span class="i-name">skt-icon-play</span><span class="i-code">0xe882</span></div>
+        <div title="Code: 0xe883" class="the-icons span3"><i class="skt-icon-glyph-16"></i> <span class="i-name">skt-icon-glyph-16</span><span class="i-code">0xe883</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe884" class="the-icons span3"><i class="skt-icon-location-1"></i> <span class="i-name">skt-icon-location-1</span><span class="i-code">0xe884</span></div>
+        <div title="Code: 0xe885" class="the-icons span3"><i class="skt-icon-exit"></i> <span class="i-name">skt-icon-exit</span><span class="i-code">0xe885</span></div>
+        <div title="Code: 0xe886" class="the-icons span3"><i class="skt-icon-error"></i> <span class="i-name">skt-icon-error</span><span class="i-code">0xe886</span></div>
+        <div title="Code: 0xe887" class="the-icons span3"><i class="skt-icon-success"></i> <span class="i-name">skt-icon-success</span><span class="i-code">0xe887</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe888" class="the-icons span3"><i class="skt-icon-group"></i> <span class="i-name">skt-icon-group</span><span class="i-code">0xe888</span></div>
+        <div title="Code: 0xe889" class="the-icons span3"><i class="skt-icon-user-profile"></i> <span class="i-name">skt-icon-user-profile</span><span class="i-code">0xe889</span></div>
+        <div title="Code: 0xe88a" class="the-icons span3"><i class="skt-icon-user"></i> <span class="i-name">skt-icon-user</span><span class="i-code">0xe88a</span></div>
+        <div title="Code: 0xe88b" class="the-icons span3"><i class="skt-icon-list"></i> <span class="i-name">skt-icon-list</span><span class="i-code">0xe88b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe88c" class="the-icons span3"><i class="skt-icon-attach"></i> <span class="i-name">skt-icon-attach</span><span class="i-code">0xe88c</span></div>
+        <div title="Code: 0xe88d" class="the-icons span3"><i class="skt-icon-link"></i> <span class="i-name">skt-icon-link</span><span class="i-code">0xe88d</span></div>
+        <div title="Code: 0xe88e" class="the-icons span3"><i class="skt-icon-new"></i> <span class="i-name">skt-icon-new</span><span class="i-code">0xe88e</span></div>
+        <div title="Code: 0xe88f" class="the-icons span3"><i class="skt-icon-cancel-2"></i> <span class="i-name">skt-icon-cancel-2</span><span class="i-code">0xe88f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe890" class="the-icons span3"><i class="skt-icon-acept"></i> <span class="i-name">skt-icon-acept</span><span class="i-code">0xe890</span></div>
+        <div title="Code: 0xe891" class="the-icons span3"><i class="skt-icon-edit"></i> <span class="i-name">skt-icon-edit</span><span class="i-code">0xe891</span></div>
+        <div title="Code: 0xe892" class="the-icons span3"><i class="skt-icon-home"></i> <span class="i-name">skt-icon-home</span><span class="i-code">0xe892</span></div>
+        <div title="Code: 0xe893" class="the-icons span3"><i class="skt-icon-basquet"></i> <span class="i-name">skt-icon-basquet</span><span class="i-code">0xe893</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe894" class="the-icons span3"><i class="skt-icon-info"></i> <span class="i-name">skt-icon-info</span><span class="i-code">0xe894</span></div>
+        <div title="Code: 0xe895" class="the-icons span3"><i class="skt-icon-CmsDev"></i> <span class="i-name">skt-icon-CmsDev</span><span class="i-code">0xe895</span></div>
+        <div title="Code: 0xe896" class="the-icons span3"><i class="skt-icon-view"></i> <span class="i-name">skt-icon-view</span><span class="i-code">0xe896</span></div>
+        <div title="Code: 0xe897" class="the-icons span3"><i class="skt-icon-page-config"></i> <span class="i-name">skt-icon-page-config</span><span class="i-code">0xe897</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe898" class="the-icons span3"><i class="skt-icon-page"></i> <span class="i-name">skt-icon-page</span><span class="i-code">0xe898</span></div>
+        <div title="Code: 0xe899" class="the-icons span3"><i class="skt-icon-config"></i> <span class="i-name">skt-icon-config</span><span class="i-code">0xe899</span></div>
+        <div title="Code: 0xe89a" class="the-icons span3"><i class="skt-icon-tasks"></i> <span class="i-name">skt-icon-tasks</span><span class="i-code">0xe89a</span></div>
+        <div title="Code: 0xe89b" class="the-icons span3"><i class="skt-icon-defined"></i> <span class="i-name">skt-icon-defined</span><span class="i-code">0xe89b</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe89c" class="the-icons span3"><i class="skt-icon-access"></i> <span class="i-name">skt-icon-access</span><span class="i-code">0xe89c</span></div>
+        <div title="Code: 0xe89d" class="the-icons span3"><i class="skt-icon-cancel-1"></i> <span class="i-name">skt-icon-cancel-1</span><span class="i-code">0xe89d</span></div>
+        <div title="Code: 0xe89e" class="the-icons span3"><i class="skt-icon-comments"></i> <span class="i-name">skt-icon-comments</span><span class="i-code">0xe89e</span></div>
+        <div title="Code: 0xe89f" class="the-icons span3"><i class="skt-icon-twitter"></i> <span class="i-name">skt-icon-twitter</span><span class="i-code">0xe89f</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8a0" class="the-icons span3"><i class="skt-icon-video"></i> <span class="i-name">skt-icon-video</span><span class="i-code">0xe8a0</span></div>
+        <div title="Code: 0xe8a1" class="the-icons span3"><i class="skt-icon-favorites"></i> <span class="i-name">skt-icon-favorites</span><span class="i-code">0xe8a1</span></div>
+        <div title="Code: 0xe8a2" class="the-icons span3"><i class="skt-icon-facebook"></i> <span class="i-name">skt-icon-facebook</span><span class="i-code">0xe8a2</span></div>
+        <div title="Code: 0xe8a3" class="the-icons span3"><i class="skt-icon-audio"></i> <span class="i-name">skt-icon-audio</span><span class="i-code">0xe8a3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8a4" class="the-icons span3"><i class="skt-icon-view-1"></i> <span class="i-name">skt-icon-view-1</span><span class="i-code">0xe8a4</span></div>
+        <div title="Code: 0xe8a5" class="the-icons span3"><i class="skt-icon-google-plus"></i> <span class="i-name">skt-icon-google-plus</span><span class="i-code">0xe8a5</span></div>
+        <div title="Code: 0xe8a6" class="the-icons span3"><i class="skt-icon-minimize"></i> <span class="i-name">skt-icon-minimize</span><span class="i-code">0xe8a6</span></div>
+        <div title="Code: 0xe8a7" class="the-icons span3"><i class="skt-icon-view-2"></i> <span class="i-name">skt-icon-view-2</span><span class="i-code">0xe8a7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8a8" class="the-icons span3"><i class="skt-icon-pinterest"></i> <span class="i-name">skt-icon-pinterest</span><span class="i-code">0xe8a8</span></div>
+        <div title="Code: 0xe8a9" class="the-icons span3"><i class="skt-icon-menu-3lines"></i> <span class="i-name">skt-icon-menu-3lines</span><span class="i-code">0xe8a9</span></div>
+        <div title="Code: 0xe8aa" class="the-icons span3"><i class="skt-icon-icon-email"></i> <span class="i-name">skt-icon-icon-email</span><span class="i-code">0xe8aa</span></div>
+        <div title="Code: 0xe8ab" class="the-icons span3"><i class="skt-icon-view-3"></i> <span class="i-name">skt-icon-view-3</span><span class="i-code">0xe8ab</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8ac" class="the-icons span3"><i class="skt-icon-close"></i> <span class="i-name">skt-icon-close</span><span class="i-code">0xe8ac</span></div>
+        <div title="Code: 0xe8ad" class="the-icons span3"><i class="skt-icon-linkedin"></i> <span class="i-name">skt-icon-linkedin</span><span class="i-code">0xe8ad</span></div>
+        <div title="Code: 0xe8ae" class="the-icons span3"><i class="skt-icon-news"></i> <span class="i-name">skt-icon-news</span><span class="i-code">0xe8ae</span></div>
+        <div title="Code: 0xe8af" class="the-icons span3"><i class="skt-icon-galery"></i> <span class="i-name">skt-icon-galery</span><span class="i-code">0xe8af</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8b0" class="the-icons span3"><i class="skt-icon-folder"></i> <span class="i-name">skt-icon-folder</span><span class="i-code">0xe8b0</span></div>
+        <div title="Code: 0xe8b1" class="the-icons span3"><i class="skt-icon-control"></i> <span class="i-name">skt-icon-control</span><span class="i-code">0xe8b1</span></div>
+        <div title="Code: 0xe8b2" class="the-icons span3"><i class="skt-icon-download"></i> <span class="i-name">skt-icon-download</span><span class="i-code">0xe8b2</span></div>
+        <div title="Code: 0xe8b3" class="the-icons span3"><i class="skt-icon-upload"></i> <span class="i-name">skt-icon-upload</span><span class="i-code">0xe8b3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8b4" class="the-icons span3"><i class="skt-icon-document"></i> <span class="i-name">skt-icon-document</span><span class="i-code">0xe8b4</span></div>
+        <div title="Code: 0xe8b5" class="the-icons span3"><i class="skt-icon-config1"></i> <span class="i-name">skt-icon-config1</span><span class="i-code">0xe8b5</span></div>
+        <div title="Code: 0xe8b6" class="the-icons span3"><i class="skt-icon-search-1"></i> <span class="i-name">skt-icon-search-1</span><span class="i-code">0xe8b6</span></div>
+        <div title="Code: 0xe8b7" class="the-icons span3"><i class="skt-icon-tags"></i> <span class="i-name">skt-icon-tags</span><span class="i-code">0xe8b7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8b8" class="the-icons span3"><i class="skt-icon-script"></i> <span class="i-name">skt-icon-script</span><span class="i-code">0xe8b8</span></div>
+        <div title="Code: 0xe8b9" class="the-icons span3"><i class="skt-icon-page-properties"></i> <span class="i-name">skt-icon-page-properties</span><span class="i-code">0xe8b9</span></div>
+        <div title="Code: 0xe8ba" class="the-icons span3"><i class="skt-icon-theme-layout"></i> <span class="i-name">skt-icon-theme-layout</span><span class="i-code">0xe8ba</span></div>
+        <div title="Code: 0xe8bb" class="the-icons span3"><i class="skt-icon-language"></i> <span class="i-name">skt-icon-language</span><span class="i-code">0xe8bb</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8bc" class="the-icons span3"><i class="skt-icon-calendar"></i> <span class="i-name">skt-icon-calendar</span><span class="i-code">0xe8bc</span></div>
+        <div title="Code: 0xe8bd" class="the-icons span3"><i class="skt-icon-code"></i> <span class="i-name">skt-icon-code</span><span class="i-code">0xe8bd</span></div>
+        <div title="Code: 0xe8be" class="the-icons span3"><i class="skt-icon-image"></i> <span class="i-name">skt-icon-image</span><span class="i-code">0xe8be</span></div>
+        <div title="Code: 0xe8bf" class="the-icons span3"><i class="skt-icon-code-1"></i> <span class="i-name">skt-icon-code-1</span><span class="i-code">0xe8bf</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8c0" class="the-icons span3"><i class="skt-icon-down-open-1"></i> <span class="i-name">skt-icon-down-open-1</span><span class="i-code">0xe8c0</span></div>
+        <div title="Code: 0xe8c1" class="the-icons span3"><i class="skt-icon-left-open-1"></i> <span class="i-name">skt-icon-left-open-1</span><span class="i-code">0xe8c1</span></div>
+        <div title="Code: 0xe8c2" class="the-icons span3"><i class="skt-icon-right-open-1"></i> <span class="i-name">skt-icon-right-open-1</span><span class="i-code">0xe8c2</span></div>
+        <div title="Code: 0xe8c3" class="the-icons span3"><i class="skt-icon-up-open-1"></i> <span class="i-name">skt-icon-up-open-1</span><span class="i-code">0xe8c3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8c4" class="the-icons span3"><i class="skt-icon-plus-squared-1"></i> <span class="i-name">skt-icon-plus-squared-1</span><span class="i-code">0xe8c4</span></div>
+        <div title="Code: 0xe8c5" class="the-icons span3"><i class="skt-icon-minus-squared-1"></i> <span class="i-name">skt-icon-minus-squared-1</span><span class="i-code">0xe8c5</span></div>
+        <div title="Code: 0xe8c6" class="the-icons span3"><i class="skt-icon-desktop-1"></i> <span class="i-name">skt-icon-desktop-1</span><span class="i-code">0xe8c6</span></div>
+        <div title="Code: 0xe8c7" class="the-icons span3"><i class="skt-icon-laptop-1"></i> <span class="i-name">skt-icon-laptop-1</span><span class="i-code">0xe8c7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8c8" class="the-icons span3"><i class="skt-icon-tablet-1"></i> <span class="i-name">skt-icon-tablet-1</span><span class="i-code">0xe8c8</span></div>
+        <div title="Code: 0xe8c9" class="the-icons span3"><i class="skt-icon-mobile-1"></i> <span class="i-name">skt-icon-mobile-1</span><span class="i-code">0xe8c9</span></div>
+        <div title="Code: 0xe8ca" class="the-icons span3"><i class="skt-icon-code-3"></i> <span class="i-name">skt-icon-code-3</span><span class="i-code">0xe8ca</span></div>
+        <div title="Code: 0xe8cb" class="the-icons span3"><i class="skt-icon-folder-add-1"></i> <span class="i-name">skt-icon-folder-add-1</span><span class="i-code">0xe8cb</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8cc" class="the-icons span3"><i class="skt-icon-folder-delete-1"></i> <span class="i-name">skt-icon-folder-delete-1</span><span class="i-code">0xe8cc</span></div>
+        <div title="Code: 0xe8cd" class="the-icons span3"><i class="skt-icon-folder-2"></i> <span class="i-name">skt-icon-folder-2</span><span class="i-code">0xe8cd</span></div>
+        <div title="Code: 0xe8ce" class="the-icons span3"><i class="skt-icon-folder-empty-1"></i> <span class="i-name">skt-icon-folder-empty-1</span><span class="i-code">0xe8ce</span></div>
+        <div title="Code: 0xe8cf" class="the-icons span3"><i class="skt-icon-folder-open-empty-1"></i> <span class="i-name">skt-icon-folder-open-empty-1</span><span class="i-code">0xe8cf</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8d0" class="the-icons span3"><i class="skt-icon-docs-1"></i> <span class="i-name">skt-icon-docs-1</span><span class="i-code">0xe8d0</span></div>
+        <div title="Code: 0xe8d1" class="the-icons span3"><i class="skt-icon-file-pdf-1"></i> <span class="i-name">skt-icon-file-pdf-1</span><span class="i-code">0xe8d1</span></div>
+        <div title="Code: 0xe8d2" class="the-icons span3"><i class="skt-icon-file-word-1"></i> <span class="i-name">skt-icon-file-word-1</span><span class="i-code">0xe8d2</span></div>
+        <div title="Code: 0xe8d3" class="the-icons span3"><i class="skt-icon-file-excel-1"></i> <span class="i-name">skt-icon-file-excel-1</span><span class="i-code">0xe8d3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8d4" class="the-icons span3"><i class="skt-icon-file-powerpoint-1"></i> <span class="i-name">skt-icon-file-powerpoint-1</span><span class="i-code">0xe8d4</span></div>
+        <div title="Code: 0xe8d5" class="the-icons span3"><i class="skt-icon-file-image-1"></i> <span class="i-name">skt-icon-file-image-1</span><span class="i-code">0xe8d5</span></div>
+        <div title="Code: 0xe8d6" class="the-icons span3"><i class="skt-icon-file-archive-1"></i> <span class="i-name">skt-icon-file-archive-1</span><span class="i-code">0xe8d6</span></div>
+        <div title="Code: 0xe8d7" class="the-icons span3"><i class="skt-icon-file-audio-1"></i> <span class="i-name">skt-icon-file-audio-1</span><span class="i-code">0xe8d7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8d8" class="the-icons span3"><i class="skt-icon-file-video-1"></i> <span class="i-name">skt-icon-file-video-1</span><span class="i-code">0xe8d8</span></div>
+        <div title="Code: 0xe8d9" class="the-icons span3"><i class="skt-icon-file-code-1"></i> <span class="i-name">skt-icon-file-code-1</span><span class="i-code">0xe8d9</span></div>
+        <div title="Code: 0xe8da" class="the-icons span3"><i class="skt-icon-doc-text-inv-1"></i> <span class="i-name">skt-icon-doc-text-inv-1</span><span class="i-code">0xe8da</span></div>
+        <div title="Code: 0xe8db" class="the-icons span3"><i class="skt-icon-doc-text-1"></i> <span class="i-name">skt-icon-doc-text-1</span><span class="i-code">0xe8db</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8dc" class="the-icons span3"><i class="skt-icon-doc-inv-1"></i> <span class="i-name">skt-icon-doc-inv-1</span><span class="i-code">0xe8dc</span></div>
+        <div title="Code: 0xe8dd" class="the-icons span3"><i class="skt-icon-doc-1"></i> <span class="i-name">skt-icon-doc-1</span><span class="i-code">0xe8dd</span></div>
+        <div title="Code: 0xe8de" class="the-icons span3"><i class="skt-icon-expand-1"></i> <span class="i-name">skt-icon-expand-1</span><span class="i-code">0xe8de</span></div>
+        <div title="Code: 0xe8df" class="the-icons span3"><i class="skt-icon-expand"></i> <span class="i-name">skt-icon-expand</span><span class="i-code">0xe8df</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8e0" class="the-icons span3"><i class="skt-icon-eye"></i> <span class="i-name">skt-icon-eye</span><span class="i-code">0xe8e0</span></div>
+        <div title="Code: 0xe8e1" class="the-icons span3"><i class="skt-icon-rewrite"></i> <span class="i-name">skt-icon-rewrite</span><span class="i-code">0xe8e1</span></div>
+        <div title="Code: 0xe8e2" class="the-icons span3"><i class="skt-icon-help"></i> <span class="i-name">skt-icon-help</span><span class="i-code">0xe8e2</span></div>
+        <div title="Code: 0xe8e3" class="the-icons span3"><i class="skt-icon-download-cloud"></i> <span class="i-name">skt-icon-download-cloud</span><span class="i-code">0xe8e3</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8e4" class="the-icons span3"><i class="skt-icon-upload-cloud"></i> <span class="i-name">skt-icon-upload-cloud</span><span class="i-code">0xe8e4</span></div>
+        <div title="Code: 0xe8e5" class="the-icons span3"><i class="skt-icon-cc-paypal"></i> <span class="i-name">skt-icon-cc-paypal</span><span class="i-code">0xe8e5</span></div>
+        <div title="Code: 0xe8e6" class="the-icons span3"><i class="skt-icon-cc-visa"></i> <span class="i-name">skt-icon-cc-visa</span><span class="i-code">0xe8e6</span></div>
+        <div title="Code: 0xe8e7" class="the-icons span3"><i class="skt-icon-cc-mastercard"></i> <span class="i-name">skt-icon-cc-mastercard</span><span class="i-code">0xe8e7</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8e8" class="the-icons span3"><i class="skt-icon-inbox"></i> <span class="i-name">skt-icon-inbox</span><span class="i-code">0xe8e8</span></div>
+        <div title="Code: 0xe8e9" class="the-icons span3"><i class="skt-icon-download-1"></i> <span class="i-name">skt-icon-download-1</span><span class="i-code">0xe8e9</span></div>
+        <div title="Code: 0xe8ea" class="the-icons span3"><i class="skt-icon-download-alt"></i> <span class="i-name">skt-icon-download-alt</span><span class="i-code">0xe8ea</span></div>
+        <div title="Code: 0xe8eb" class="the-icons span3"><i class="skt-icon-spin3 animate-spin"></i> <span class="i-name">skt-icon-spin3</span><span class="i-code">0xe8eb</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8ec" class="the-icons span3"><i class="skt-icon-award"></i> <span class="i-name">skt-icon-award</span><span class="i-code">0xe8ec</span></div>
+        <div title="Code: 0xe8ed" class="the-icons span3"><i class="skt-icon-coffee"></i> <span class="i-name">skt-icon-coffee</span><span class="i-code">0xe8ed</span></div>
+        <div title="Code: 0xe8ee" class="the-icons span3"><i class="skt-icon-briefcase"></i> <span class="i-name">skt-icon-briefcase</span><span class="i-code">0xe8ee</span></div>
+        <div title="Code: 0xe8ef" class="the-icons span3"><i class="skt-icon-graduation-cap"></i> <span class="i-name">skt-icon-graduation-cap</span><span class="i-code">0xe8ef</span></div>
+      </div>
+      <div class="row">
+        <div title="Code: 0xe8f0" class="the-icons span3"><i class="skt-icon-wechat"></i> <span class="i-name">skt-icon-wechat</span><span class="i-code">0xe8f0</span></div>
+        <div title="Code: 0xe8f1" class="the-icons span3"><i class="skt-icon-slideshare"></i> <span class="i-name">skt-icon-slideshare</span><span class="i-code">0xe8f1</span></div>
+      </div>
+    </div>
+    <div class="container footer">Generated by <a href="http://fontello.com">fontello.com</a></div>
+  </body>
+</html>

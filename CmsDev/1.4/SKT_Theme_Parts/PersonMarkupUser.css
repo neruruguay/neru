@@ -1,0 +1,170 @@
+
+
+.personMarkup {
+    background-color: #06a7ea;
+    color: #ffffff;
+    display: inline-table;
+    float: right;
+    height: 35px;
+    line-height: 35px;
+    margin: 13px 0 0 13px;
+    padding: 0 5px 0 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: background-color 0.2s ease-in 0s;
+    vertical-align: middle;
+    z-index: 1;
+}
+/*-- SktUserProfilePage ------------------------------------*/
+
+.SktPageUserProfile, .SktPageCreateAccount {
+    display: block;
+    /*padding: 20px;*/
+    position: relative;
+}
+
+.SktPageUserProfile .UserNoLogin {
+    display: block;
+    padding: 80px 0 60px;
+    position: relative;
+    text-align: center;
+}
+.UserNoLogin i {
+    font-size: 8em !important;
+    left: 0;
+    margin: -25% 25% !important;
+    opacity: 0.2;
+    position: absolute !important;
+    right: 0;
+    text-align: center;
+}
+.personMarkup .ProfileLink {
+    background: url("../img/spriteUser.png") no-repeat scroll -40px -40px transparent;
+    display: inline-block;
+    height: 20px;
+    line-height: 21px;
+    text-indent: -999em;
+    width: 20px;
+}
+.personMarkup .ProfileLink.gray {
+    background: url("../img/spriteUser.png") no-repeat scroll -20px -40px transparent;
+}
+.personMarkup .ProfileLink.white {
+    background: url("../img/spriteUser.png") no-repeat scroll -40px -40px transparent;
+}
+.personMarkup .LogoutLink {
+    background: url("../img/spriteUser.png") no-repeat scroll -40px -60px transparent;
+    display: inline-block;
+    height: 20px;
+    line-height: 21px;
+    text-indent: -999em;
+    width: 20px;
+}
+.personMarkup .LogoutLink.gray {
+    background: url("../img/spriteUser.png") no-repeat scroll -20px -60px transparent;
+}
+.personMarkup .LogoutLink.white {
+    background: url("../img/spriteUser.png") no-repeat scroll -40px -60px transparent;
+}
+.personMarkup .info a span b {
+    background: none repeat scroll 0 0 rgba(50, 50, 50, 0.5);
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 10px;
+    padding: 0 8px;
+}
+.personMarkup .info, .personMarkup img {
+    display: inline-table;
+    float: left;
+    height: 35px;
+    vertical-align: middle;
+}
+.personMarkup img#ImageProfile {
+    margin: 0 8px 0 0;
+    width: 35px;
+}
+.personMarkup .info a {
+    color: #ffffff;
+    display: table-cell;
+    float: left;
+    font-size: 12px;
+    height: 35px;
+    margin: 0;
+    padding: 0 5px;
+    vertical-align: middle;
+}
+.personMarkup .info a:hover {
+    color: #ffffff;
+    text-decoration: none;
+}
+.personMarkup .info a.NameLink {
+    height: 35px;
+    line-height: 11px;
+    overflow: hidden;
+    margin: 0 0 0 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 120px;
+    color: #FFFFFF;
+    font-size: 11px;
+}
+
+.personMarkup .info a.NameLink span {
+    display: inline-block;
+    line-height: 11px;
+    padding-top: 5px;
+}
+.sktloginoptionsBotton {
+    cursor: pointer;
+}
+
+.personMarkup #sktloginoptions .collapsibleContainer {
+    color: white;
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    margin: 0 0 0 5px;
+    padding: 0 7px 0 0;
+    position: relative;
+    right: -5px;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+}
+.personMarkup .info a.LoginLink,
+.personMarkup .info a.RegisterLink,
+.personMarkup .info a.ConnectFacebook,
+.personMarkup .info a.ConnectGoogle{
+    display: inline-block;
+    float: left;
+    margin: 8px 0 0 10px;
+    text-indent: -999em;
+    width: 20px; height: 20px;
+    background: url("../img/spriteUser.png") no-repeat scroll 0 0 transparent;
+}
+.personMarkup .info a.LoginLink:hover,
+.personMarkup .info a.RegisterLink:hover,
+.personMarkup .info a.ConnectFacebook:hover,
+.personMarkup .info a.ConnectGoogle:hover{
+    background-color: #66cc00;
+}
+.personMarkup .info a.LoginLink{
+    background-position: -60px -80px;
+}
+.personMarkup .info a.RegisterLink{
+    background-position: -40px -100px;
+}
+.personMarkup .info a.ConnectFacebook{
+    background-position: -40px -20px;
+}
+.personMarkup .info a.ConnectGoogle{
+    background-position: -40px 0;
+}
+.personMarkup #Avatar {
+    float: left;
+    height: 30px;
+    margin: 2px 5px 3px 3px;
+    width: 30px;
+}
