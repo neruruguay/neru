@@ -121,7 +121,6 @@ DirectoryIndex index.php index.html index.htm
         RewriteRule ^(empresas)\/(.*)\/$                                                index.php?empresas=1&sort=$2&order=0&cat=0&urlcat1=0&Subcat=0&urlSubcat=0&Sub2cat=0&urlSub2cat=0 [L]
         RewriteRule ^(empresas)\/$                                                      index.php?empresas=0&sort=0&order=0&cat=0&urlcat1=0&Subcat=0&urlSubcat=0&Sub2cat=0&urlSub2cat=0 [L]
 
-        
         RewriteRule ^(usr)\/(.*)\/(.*)\/(.*)\/(.*)\/(.*)\/(.*)\/$   index.php?usr=$2&uName=$3&uAction=$4&uValue=$5&n=$6&n2=$7 [L]
         RewriteRule ^(usr)\/(.*)\/(.*)\/(.*)\/(.*)\/(.*)\/$         index.php?usr=$2&uName=$3&uAction=$4&uValue=$5&n=$6&n2= [L]
         RewriteRule ^(usr)\/(.*)\/(.*)\/(.*)\/(.*)\/$               index.php?usr=$2&uName=$3&uAction=$4&uValue=$5&n=&n2= [L]
