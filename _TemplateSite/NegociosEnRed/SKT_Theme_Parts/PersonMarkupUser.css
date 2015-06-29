@@ -1,0 +1,52 @@
+.personMarkup .dropdown-menu > li > a {
+    border-bottom: 1px dotted;
+    clear: both;
+    color: #333333;
+    display: block;
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 0;
+    padding: 3px 15px 4px 4px;
+    white-space: nowrap;
+}
+.personMarkup .dropdown-menu > li > a:hover {
+    color: #ffffff;
+}
+.personMarkup .dropdown-menu > li > a span {
+    display: inline-block;
+    float: none;
+    font-size: 14px;
+    line-height: 1;
+    margin: -3px 0 0;
+    padding: 0 0 0 5px;
+    position: relative;
+    vertical-align: middle;
+}
+.personMarkup .skt-publisher {
+    background: none repeat scroll 0 0 #ff8500;
+    border-radius: 3px;
+    display: inline-block;
+    float: right;
+    height: 38px;
+    line-height: 37px;
+    margin: -6px 0 0 26px;
+    padding: 0 8px;
+    position: relative;
+}
+#personMarkup a.thumb, #personMarkup a.thumb:hover {
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    height: 32px !important;
+    width: 32px !important;
+    padding: 0px;
+    background: transparent !important;
+}
+#ImageProfile {
+    border-radius: 20px;
+    display: inline-block !important;
+    height: 32px !important;
+    width: 32px !important;
+    margin: -3px 0 0 0; 
+}
+a:hover #ImageProfile{border: 0 none;}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <!-- Set the viewport width to device width for mobile -->
+        <meta name="viewport" content="width=device-width" />
+        <!-- Included CSS Files -->
+        <link rel="stylesheet" href="css/slidebars.min.css">
+    </head>
+    <body>
+
+        <div id="download" class="row" data-magellan-destination="download">
+            <div class="large-12 columns">
+                <p><a id="download-button" class="button radius" href="https://github.com/artberri/sidr-package/archive/1.2.1.zip">Download</a></p>
+            </div>
+        </div>
+
+        <div id="screenshots" class="row">
+            <div class="large-8 columns">
+                <img src="images/screenshots.png" alt="Screenshots" />
+            </div>
+            <div class="large-4 columns">
+                <p>You will be able to create multiple <em>sidrs</em> on both sides of your web to make responsives menus (or not, it works perfectly on desktop too).</p>
+                <p>Fill the <em>sidrs</em> normally, with existent content, remote content,... or what you want.</p>
+            </div>
+        </div>
+
+        <div id="social">
+            <div class="row">
+                <div class="large-12 columns">
+                    <a href="https://github.com/artberri/sidr" class="gitforked-button gitforked-forks gitforked-watchers">Fork</a> <a href="https://twitter.com/share" class="twitter-share-button" data-related="artberri">Tweet</a> <div class="g-plusone" data-size="medium" data-callback="gplusCallback" data-href="http://www.berriart.com/sidr/"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="navigation">
+            <nav class="nav" data-magellan-expedition='fixed'>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <ul class="nav-bar">
+                            <li data-magellan-arrival="download"><a class="smooth" href="#download">Download</a></li><li data-magellan-arrival="getstarted"><a class="smooth" href="#getstarted">Get started</a></li><li data-magellan-arrival="usage"><a class="smooth" href="#usage">Demos &amp; Usage</a></li><li data-magellan-arrival="documentation"><a class="smooth" href="#documentation">Documentation</a></li><li data-magellan-arrival="themes"><a class="smooth" href="#themes">Themes</a></li><li data-magellan-arrival="development"><a class="smooth" href="#development">Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section id="getstarted" data-magellan-destination="getstarted">
+            <div class="row">
+                <div class="large-12 columns">
+                    <header>
+                        <h1>Get started</h1>
+                    </header>
+                    <p>Like any other plugin, you must include it after the jQuery script. For a better performance load them at the bottom of your page or in an asynchronous way.</p>
+                    <p>You have to include a <a class="smooth" href="#themes">Sidr Theme</a> stylesheet too, choose between the dark or the light one, or if you prefer create one by your own.</p>
+                    <div class="code">
+
+                        <noscript><pre>
+	File: getstarted.sidr.html
+	--------------------------
+
+	&lt;!DOCTYPE html&gt;
+	&lt;html&gt;
+	  &lt;head&gt;
+	    &lt;!-- Your stuff --&gt;
+
+	    &lt;!-- Include Sidr bundled CSS theme --&gt;
+	    &lt;link rel=&quot;stylesheet&quot; href=&quot;javascripts/sidr/stylesheets/jquery.sidr.dark.css&quot;&gt;
+	  &lt;/head&gt;
+	  &lt;body&gt;
+	    &lt;!-- Your stuff --&gt;
+
+	    &lt;!-- Include jQuery --&gt;
+	    &lt;script src=&quot;javascripts/jquery.js&quot;&gt;&lt;/script&gt;
+	    &lt;!-- Include the Sidr JS --&gt;
+	    &lt;script src=&quot;javascripts/sidr/jquery.sidr.min.js&quot;&gt;&lt;/script&gt;
+	  &lt;/body&gt;
+	&lt;/html&gt;
+                        </pre></noscript>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="usage" data-magellan-destination="usage">
+            <div class="row">
+                <div class="large-12 columns">
+                    <header id="demoheader">
+                        <h1>Demos &amp; Usage</h1>
+                    </header>
+                    <div id="demo-content"><p>Here are described differents ways of usage for this plugin, you can read and adapt them to your website's requeriments. Below are described all options with details.</p></div>
+
+                    <div class="usage-section">
+                        <h2>The Simplest Usage <a id="simple-menu" class="tiny button secondary radius" href="#sidr">Simple menu</a></h2>
+
+                        <p>Create a <em>div</em> called <em>sidr</em> and place your menu there. Then activate the plugin binding it to a link. By default, the menu wont't be visible and it will be displayed or hidden by clicking on the link.</p>
+                        <div class="code">
+
+                            <noscript><pre>
+File: simplest.sample.sidr.html
+-------------------------------
+
+&lt;a id=&quot;simple-menu&quot; href=&quot;#sidr&quot;&gt;Toggle menu&lt;/a&gt;
+
+&lt;div id=&quot;sidr&quot;&gt;
+  &lt;!-- Your content --&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;List 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;List 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+  $(&#39;#simple-menu&#39;).sidr();
+});
+&lt;/script&gt;
+                            </pre></noscript>
+                        </div>
+                    </div>
+                    <div class="usage-section">
+                        <h2>Create Multiple Menus <a id="left-menu" class="tiny button secondary radius" href="#left-menu">Left Menu</a> <a id="right-menu" class="tiny button secondary radius" href="#right-menu">Right Menu</a></h2>
+
+                        <p>You can create as many menus as you want in the same page, and you can place them at the right or left side. When creating more than one menu, you need to name them. As it is shown in the example, if you don't create the menu <em>div</em> container, the plugin will create it for you.</p>
+                        <div class="code">
+
+                            <noscript><pre>
+File: multiple.sample.sidr.html
+-------------------------------
+
+&lt;a id=&quot;left-menu&quot; href=&quot;#left-menu&quot;&gt;Left Menu&lt;/a&gt;
+&lt;a id=&quot;right-menu&quot; href=&quot;#right-menu&quot;&gt;Right Menu&lt;/a&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+    $(&#39;#left-menu&#39;).sidr({
+      name: &#39;sidr-left&#39;,
+      side: &#39;left&#39; // By default
+    });
+    $(&#39;#right-menu&#39;).sidr({
+      name: &#39;sidr-right&#39;,
+      side: &#39;right&#39;
+    });
+});
+&lt;/script&gt;
+                            </pre></noscript>
+                        </div>
+                    </div>
+
+                    <div class="usage-section">
+                        <h2>The Menu Content <a id="existing-content-menu" class="tiny button secondary radius" href="#existing-content-menu">Existing content</a> <a id="remote-content-menu" class="tiny button secondary radius" href="#remote-content-menu">Load remotelly</a> <a id="callback-menu" class="tiny button secondary radius" href="#callback-menu">Callback loaded</a></h2>
+
+                        <p>There are four ways to load content in the menus, choose yours with the <em>source</em> option.</p>
+                        <ul>
+                            <li>We have shown the first way at the 'Simplest Usage' demo, no more than placing the content into the div menu.</li>
+                            <li>The most common way is to load existing <em>html</em> into the menu, you can add as many selectors as you want and they will be loaded in order.</li>
+                            <li>There is the possibility to load remote content easily via <em>AJAX</em>.</li>
+                            <li>If you need a more complex way to load content into the menu you can just create a callback function.</li>
+                        </ul>
+                        <div class="code">
+
+                            <noscript><pre>
+File: content.sample.sidr.html
+------------------------------
+
+&lt;a id=&quot;existing-content-menu&quot; href=&quot;#existing-content-menu&quot;&gt;Existing content&lt;/a&gt;
+&lt;a id=&quot;remote-content-menu&quot; href=&quot;#remote-content-menu&quot;&gt;Load remotelly&lt;/a&gt;
+&lt;a id=&quot;callback-menu&quot; href=&quot;#callback-menu&quot;&gt;Callback loaded&lt;/a&gt;
+
+&lt;header id=&quot;demoheader&quot;&gt;
+    &lt;h1&gt;Demos &amp;amp; Usage&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;div id=&quot;demo-content&quot;&gt;
+    &lt;p&gt;Here are described differents ways of usage for this plugin, you can read and adapt them to your website&#39;s requeriments. Below are described all options with details.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+$(document).ready(function() {
+    $(&#39;#existing-content-menu&#39;).sidr({
+      name: &#39;sidr-existing-content&#39;,
+      source: &#39;#demoheader, #demo-content&#39;
+    });
+    $(&#39;#remote-content-menu&#39;).sidr({
+      name: &#39;sidr-remote-content&#39;,
+      source: &#39;http://www.example.com/remote-menu.html&#39;
+    });
+    $(&#39;#callback-menu&#39;).sidr({
+      name: &#39;sidr-callback&#39;,
+      source: function(name) {
+        return &#39;&lt;h1&gt;&#39; + name + &#39; menu&lt;/h1&gt;&lt;p&gt;Yes! You can use a callback too ;)&lt;/p&gt;&#39;;
+      }
+    });
+});
+&lt;/script&gt;
+                            </pre></noscript>
+                        </div>
+                    </div>
+
+                    <div class="usage-section">
+                        <h2>Responsive Menus <a id="responsive-menu" class="tiny button secondary radius" href="#responsive-reveal" data-reveal-id="responsive-reveal">Responsive Menu</a></h2>
+
+                        <p>The major reason for creating this plugin was just being able to easily add existing content (like a menu, a search box, social icons,...) to a menu in small screens. Simply load existing html into a <em>sidr</em>, and then, hide this html and show the menu button with media queries.</p>
+                        <div class="code">
+
+                            <noscript><pre>
+File: responsive.sample.sidr.html
+---------------------------------
+
+&lt;style&gt;
+#mobile-header {
+    display: none;
+}
+@media only screen and (max-width: 767px){
+    #mobile-header {
+        display: block;
+    }
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;mobile-header&quot;&gt;
+    &lt;a id=&quot;responsive-menu-button&quot; href=&quot;#sidr-main&quot;&gt;Menu&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;navigation&quot;&gt;
+    &lt;nav class=&quot;nav&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#download&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#getstarted&quot;&gt;Get started&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#usage&quot;&gt;Demos &amp;amp; Usage&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#documentation&quot;&gt;Documentation&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#themes&quot;&gt;Themes&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#support&quot;&gt;Support&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    $(&#39;#responsive-menu-button&#39;).sidr({
+      name: &#39;sidr-main&#39;,
+      source: &#39;#navigation&#39;
+    });
+&lt;/script&gt;
+                            </pre></noscript>
+                        </div>
+                    </div>
+
+                    <div class="usage-section">
+                        <h2>Open/Close Programatically <a id="swipe-menu" class="tiny button secondary radius" href="#swipe-reveal" data-reveal-id="swipe-reveal">Swipe example</a></h2>
+                        <p>There are some methods you can use to open or close menus as you want, or to bind them to any event. For example, in this page the right/left swipe touch event opens or closes the responsive menu (Note: this plugin doesn't implement touch events, in this case I'm using an external library).</p>
+                        <div>
+
+                            <noscript><pre>
+File: programatically.sample.sidr.html
+--------------------------------------
+
+&lt;!-- For this example I include an external library to handle touch events --&gt;
+&lt;script src=&quot;javascripts/jquery.touchwipe.js&quot;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+      $(window).touchwipe({
+        wipeLeft: function() {
+          // Close
+          $.sidr(&#39;close&#39;, &#39;sidr-main&#39;);
+        },
+        wipeRight: function() {
+          // Open
+          $.sidr(&#39;open&#39;, &#39;sidr-main&#39;);
+        },
+        preventDefaultEvents: false
+      });
+&lt;/script&gt;
+                            </pre></noscript>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div id="sidr">
+            <!-- Your content -->
+            <ul>
+                <li><a href="#">List 1</a></li>
+                <li class="active"><a href="#">List 2</a></li>
+                <li><a href="#">List 3</a></li>
+            </ul>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="http://www.negociosenred.uy/CmsDev/1.4.assets/js/slidebars.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("#simple-menu").sidr();
+                $("#left-menu").sidr({
+                    name: "sidr-left",
+                    side: "left"
+                });
+                $("#right-menu").sidr({
+                    name: "sidr-right",
+                    side: "right"
+                });
+                $("#existing-content-menu").sidr({
+                    name: "sidr-existing-content",
+                    source: "#demoheader, #demo-content"
+                });
+                $("#callback-menu").sidr({
+                    name: "sidr-callback",
+                    source: function(e) {
+                        return "<h1>" + e + " menu</h1><p>Yes! You can use a callback too ;)</p>"
+                    }
+                });
+                $("#responsive-menu-button").sidr({
+                    name: "sidr-main",
+                    source: "#navigation"
+                });
+            })
+        </script>
+    </body>
+</html>
+
